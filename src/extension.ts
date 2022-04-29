@@ -38,11 +38,9 @@ export function activate(context: vscode.ExtensionContext) {
       }
 
       const items = emojis.map((emojiObj) => {
-        const { description, description_zh_cn, code, emoji } = emojiObj;
-        const displayDescription =
-          language === "zh-cn" ? description_zh_cn || description : description;
+        const { description, code, emoji } = emojiObj;
         const displayCode = showEmojiCode ? code : "";
-        const label = `${emoji} ${displayDescription} ${displayCode}`;
+        const label = `${emoji} ${description} ${displayCode}`;
         return {
           label,
           code,

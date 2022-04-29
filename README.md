@@ -75,19 +75,15 @@ Sample configuration:
       "emoji": "🐛",
       "code": ":bug:",
       "description": "Fix a bug.",
-      "description_zh_cn": "修复 BUG"
     },
     {
       "emoji": "🚑",
       "code": ":ambulance:",
       "description": "Critical hotfix.",
-      "description_zh_cn": "紧急热修复"
     }
   ]
 }
 ```
-
-**Notice**: `description_zh_cn` is a chinese (zh_CN) version of the description. If empty, the english description will be used.
 
 ### Only use your additionnal emojis
 

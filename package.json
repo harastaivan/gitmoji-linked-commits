@@ -86,11 +86,6 @@
               "description": {
                 "type": "string",
                 "description": "The commit type described by this emoji"
-              },
-              "description_zh_cn": {
-                "type": "string",
-                "description": "A chinese (zh_CN) version of the description. If empty, the english description will be used.",
-                "default": ""
               }
             }
           },
