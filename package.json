@@ -1,22 +1,22 @@
 {
-  "name": "gitmoji-vscode",
-  "displayName": "Gitmoji",
+  "name": "gitmoji-linked-commits",
+  "displayName": "Gitmoji linked commits",
   "description": "Gitmoji tool for git commit messages in VS Code",
   "version": "1.1.2",
   "author": {
-    "name": "Seaton Jiang",
-    "email": "hi@seatonjiang.com"
+    "name": "Ivan Harasta",
+    "email": "ivan@harasta.dev"
   },
-  "publisher": "seatonjiang",
+  "publisher": "harastaivan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/seatonjiang/gitmoji-vscode/issues"
+    "url": "https://github.com/harastaivan/gitmoji-linked-commits/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seatonjiang/gitmoji-vscode.git"
+    "url": "git+https://github.com/harastaivan/gitmoji-linked-commits.git"
   },
-  "homepage": "https://github.com/seatonjiang/gitmoji-vscode/blob/main/README.md",
+  "homepage": "https://github.com/harastaivan/gitmoji-linked-commits/blob/main/README.md",
   "engines": {
     "vscode": "^1.40.0"
   },

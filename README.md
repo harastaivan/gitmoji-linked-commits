@@ -1,35 +1,14 @@
-English | [简体中文](README.zh-CN.md)
+
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/seatonjiang/gitmoji-vscode/main/images/gitmoji.gif" width="400">
-</p>
-
-<p align="center">
-    <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square">
-    <a href="https://github.com/seatonjiang/gitmoji-vscode/issues">
-        <img src="https://img.shields.io/github/issues/seatonjiang/gitmoji-vscode?style=flat-square&color=blue">
-    </a>
-    <a href="https://github.com/seatonjiang/gitmoji-vscode/pulls">
-        <img src="https://img.shields.io/github/issues-pr/seatonjiang/gitmoji-vscode?style=flat-square&color=brightgreen">
-    </a>
-    <a href="https://github.com/seatonjiang/gitmoji-vscode/blob/main/LICENSE">
-        <img src="https://img.shields.io/github/license/seatonjiang/gitmoji-vscode?&style=flat-square">
-    </a>
-</p>
-
-<p align="center">
-    <a href="https://github.com/seatonjiang/gitmoji-vscode/issues">Report Bug</a>
+    <a href="https://github.com/harastaivan/gitmoji-linked-commits/issues">Report Bug</a>
     ·
-    <a href="https://github.com/seatonjiang/gitmoji-vscode/issues">Request Feature</a>
+    <a href="https://github.com/harastaivan/gitmoji-linked-commits/issues">Request Feature</a>
 </p>
 
-<p align="center">Gitmoji tool for git commit messages in VS Code</p>
+<p align="center">😳 Tool for gitmoji commits linked to an issues</p>
 
-## 💻 Screenshot
-
-<p align="center">
-    <img src="https://raw.githubusercontent.com/seatonjiang/gitmoji-vscode/main/images/about.gif">
-</p>
+<p align="center" style="font-weight: 700; font-size: 1.5rem">This is a fork 🍴 of <a href="https://github.com/seatonjiang">seatonjiang</a>'s <a href="https://github.com/seatonjiang/gitmoji-vscode">gitmoji-vscode</a></p>
 
 ## 📦 Install
 
@@ -43,14 +22,6 @@ English | [简体中文](README.zh-CN.md)
 ### Select output type
 
 - `outputType` - Configure the type of emoji output as needed. Default is `emoji`
-
-For emoji type:
-
-![emoji](https://raw.githubusercontent.com/seatonjiang/gitmoji-vscode/main/images/emoji.png)
-
-For code type:
-
-![code](https://raw.githubusercontent.com/seatonjiang/gitmoji-vscode/main/images/code.png)
 
 Sample configuration:
 
@@ -115,4 +86,4 @@ We welcome all contributions. You can submit any ideas as pull requests or as is
 
 ## 📃 License
 
-The project is released under the MIT License, see the [LICENCE](https://github.com/seatonjiang/gitmoji-vscode/blob/main/LICENSE) file for details.
+The project is released under the MIT License, see the [LICENCE](https://github.com/harastaivan/gitmoji-linked-commits/blob/main/LICENSE) file for details.
