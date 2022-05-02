@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="2.0.0"></a>
+
+## 2.0.0 (2022-05-02)
+
+### Added
+
+-   ✨ Introduce task quick pick [[144348a](https://github.com/harastaivan/gitmoji-linked-commits/commit/144348a45c41d2e435725ae7a5f0c5a4e8aca4d7)]
+-   ✨ Introduce description quick pick [[a68d4a7](https://github.com/harastaivan/gitmoji-linked-commits/commit/a68d4a78c307f808b2bc1416a57ffeb37cf0486b)]
+-   ✨ Introduce commit message input box [[c256956](https://github.com/harastaivan/gitmoji-linked-commits/commit/c256956aaf0a109460dd01eb3652b970cf4fd9dd)]
+
+### Changed
+
+-   ♻️ Move git repo selection to git-extension [[83727ff](https://github.com/harastaivan/gitmoji-linked-commits/commit/83727ff2df8c754a8256e9d0dd9d5523e8b87298)]
+-   ♻️ Move emoji quick pick to quick-picks, git utils to git-extension [[3643204](https://github.com/harastaivan/gitmoji-linked-commits/commit/3643204d91539da43b8742bb7875d5401df80daf)]
+-   ♻️ Move emoji data logic to gitmoji directory [[7a92514](https://github.com/harastaivan/gitmoji-linked-commits/commit/7a9251443e79e9a652986b06694d97ade5cf92c2)]
+-   ♻️ Move configuration to config file [[870de40](https://github.com/harastaivan/gitmoji-linked-commits/commit/870de40ba6d0de8214b8246a7619f1a5fe32caaf)]
+-   🚚 Rename gitmoji command [[2b8ad27](https://github.com/harastaivan/gitmoji-linked-commits/commit/2b8ad2714c3a8d2641683d2b70b7936fd0c9e129)]
+-   🔧 Update vscode config [[35eda28](https://github.com/harastaivan/gitmoji-linked-commits/commit/35eda2884e89026c65066028860ebba7e7553954)]
+
+### Fixed
+
+-   🐛 Fix pick emoji description [[77ff93c](https://github.com/harastaivan/gitmoji-linked-commits/commit/77ff93c2a811a1e239d53c29587491a06b92f77b)]
+-   🐛 Fix import types [[728f113](https://github.com/harastaivan/gitmoji-linked-commits/commit/728f1139a4322b5a713f3d25497e68a377661e1c)]
+
 <a name="1.2.0"></a>
 
 ## 1.2.0 (2022-05-02)
