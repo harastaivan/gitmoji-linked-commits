@@ -5,6 +5,7 @@ import type { EmojiWithLabel } from '../quick-picks';
 
 interface CommitMessageOptions {
     emoji: EmojiWithLabel;
+    message: string;
 }
 
 export const getGitExtension = () => {
@@ -14,10 +15,10 @@ export const getGitExtension = () => {
 };
 
 const repoCreateCommitMessage = async (repository: Repository, options: CommitMessageOptions) => {
-    const { emoji } = options;
-    const message = `${getEmoji(emoji)}`;
+    const { emoji, message } = options;
+    const commitMessage = `${getEmoji(emoji)} ${message}`;
 
-    repository.inputBox.value = message;
+    repository.inputBox.value = commitMessage;
 };
 
 export const createCommitMessage = (options: CommitMessageOptions, uri?: any) => {

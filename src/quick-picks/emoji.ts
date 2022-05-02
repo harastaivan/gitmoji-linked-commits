@@ -19,7 +19,7 @@ export const pickEmoji = async (): Promise<EmojiWithLabel | undefined> => {
         };
     });
 
-    const selected = await vscode.window.showQuickPick(items);
+    const selected = await vscode.window.showQuickPick(items, { placeHolder: 'Search for gitmoji' });
 
     return selected;
 };

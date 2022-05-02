@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import { createCommitMessage, getGitExtension } from './git-extension';
-import { pickEmoji } from './quick-picks';
+import { pickEmoji, getMessage } from './quick-picks';
 
 export function activate(context: vscode.ExtensionContext) {
     const disposable = vscode.commands.registerCommand('extension.gitmoji-linked-commit', async (uri) => {
@@ -15,9 +15,14 @@ export function activate(context: vscode.ExtensionContext) {
             return;
         }
 
+        const message = await getMessage();
+        if (message === undefined) {
+            return;
+        }
+
         vscode.commands.executeCommand('workbench.view.scm');
 
-        createCommitMessage({ emoji }, uri);
+        createCommitMessage({ emoji, message }, uri);
     });
 
     context.subscriptions.push(disposable);
