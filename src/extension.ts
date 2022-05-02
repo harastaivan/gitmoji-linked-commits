@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import { createCommitMessage, getGitExtension } from './git-extension';
-import { pickEmoji, getMessage, pickDescription } from './quick-picks';
+import { pickEmoji, getMessage, pickDescription, DescriptionType } from './quick-picks';
 import { pickTask } from './quick-picks/task';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -26,9 +26,12 @@ export function activate(context: vscode.ExtensionContext) {
             return;
         }
 
-        const task = await pickTask();
-        if (task === undefined) {
-            return;
+        let task;
+        if (description.type !== DescriptionType.NoDescription) {
+            task = await pickTask();
+            if (task === undefined) {
+                return;
+            }
         }
 
         vscode.commands.executeCommand('workbench.view.scm');

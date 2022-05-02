@@ -8,7 +8,7 @@ interface CommitMessageOptions {
     emoji: EmojiWithLabel;
     message: string;
     description: Description;
-    task: Task;
+    task?: Task;
 }
 
 export const getGitExtension = () => {
@@ -20,7 +20,7 @@ export const getGitExtension = () => {
 const repoCreateCommitMessage = async (repository: Repository, options: CommitMessageOptions) => {
     const { emoji, message, description, task } = options;
 
-    if (description.type === DescriptionType.NoDescription) {
+    if (description.type === DescriptionType.NoDescription || task?.value === undefined) {
         const commitMessage = `${getEmoji(emoji)} ${message}`;
         repository.inputBox.value = commitMessage;
         return;
