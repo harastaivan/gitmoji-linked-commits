@@ -1,11 +1,12 @@
 import * as vscode from 'vscode';
 import type { GitExtension, Repository } from '../api/git';
 import { getEmoji } from '../gitmoji';
-import type { EmojiWithLabel } from '../quick-picks';
+import { Description, DescriptionType, EmojiWithLabel } from '../quick-picks';
 
 interface CommitMessageOptions {
     emoji: EmojiWithLabel;
     message: string;
+    description: Description;
 }
 
 export const getGitExtension = () => {
@@ -15,8 +16,15 @@ export const getGitExtension = () => {
 };
 
 const repoCreateCommitMessage = async (repository: Repository, options: CommitMessageOptions) => {
-    const { emoji, message } = options;
-    const commitMessage = `${getEmoji(emoji)} ${message}`;
+    const { emoji, message, description } = options;
+
+    if (description.type === DescriptionType.NoDescription) {
+        const commitMessage = `${getEmoji(emoji)} ${message}`;
+        repository.inputBox.value = commitMessage;
+        return;
+    }
+
+    const commitMessage = `${getEmoji(emoji)} ${message}\n\n${description.value}`;
 
     repository.inputBox.value = commitMessage;
 };
