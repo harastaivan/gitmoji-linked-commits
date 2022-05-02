@@ -1,7 +1,11 @@
 import * as vscode from 'vscode';
 import type { GitExtension, Repository } from '../api/git';
-import { OUTPUT_TYPE } from '../config';
+import { getEmoji } from '../gitmoji';
 import type { EmojiWithLabel } from '../quick-picks';
+
+interface CommitMessageOptions {
+    emoji: EmojiWithLabel;
+}
 
 export const getGitExtension = () => {
     const vscodeGit = vscode.extensions.getExtension<GitExtension>('vscode.git');
@@ -9,22 +13,29 @@ export const getGitExtension = () => {
     return gitExtension && gitExtension.getAPI(1);
 };
 
-const getPrefix = (selectedEmoji: EmojiWithLabel) => {
-    if (OUTPUT_TYPE === 'emoji') {
-        return selectedEmoji.emoji;
-    }
-    return selectedEmoji.code;
+const repoCreateCommitMessage = async (repository: Repository, options: CommitMessageOptions) => {
+    const { emoji } = options;
+    const message = `${getEmoji(emoji)}`;
+
+    repository.inputBox.value = message;
 };
 
-export const prefixCommit = async (repository: Repository, selectedEmoji: EmojiWithLabel) => {
-    const prefix = getPrefix(selectedEmoji);
-    const message = `${prefix} test`;
+export const createCommitMessage = (options: CommitMessageOptions, uri?: any) => {
+    const git = getGitExtension();
+    if (!git) {
+        return;
+    }
 
-    try {
-        const res = await repository.commit(message);
-        vscode.window.showInformationMessage('Success commit');
-        return res;
-    } catch (err) {
-        vscode.window.showErrorMessage(`Unable to commit: ${(err as Error).message}`);
+    if (uri) {
+        const selectedRepository = git.repositories.find((repository) => {
+            return repository.rootUri.path === uri._rootUri.path;
+        });
+        if (selectedRepository) {
+            repoCreateCommitMessage(selectedRepository, options);
+        }
+    } else {
+        for (const repo of git.repositories) {
+            repoCreateCommitMessage(repo, options);
+        }
     }
 };
