@@ -1,6 +1,27 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [Gitmoji](https://gitmoji.dev/) for your commit messages.
+<a name="1.2.0"></a>
+
+## 1.2.0 (2022-05-02)
+
+### Added
+
+-   ➕ Add gitmoji-changelog [[7933d24](https://github.com/harastaivan/gitmoji-linked-commits/commit/7933d24e26ba97c389eb5223d28341bc8788ec52)]
+-   ➕ Add prettier and eslint [[3a3d24d](https://github.com/harastaivan/gitmoji-linked-commits/commit/3a3d24d4485cbfcc364a212ced6af91f1b7d12e1)]
+
+### Changed
+
+-   🎨 Format everything [[0e4668e](https://github.com/harastaivan/gitmoji-linked-commits/commit/0e4668e22f431f15a11b8dfd7a72ee0ad76a33e1)]
+
+### Removed
+
+-   🔥 Remove tslint [[17bd807](https://github.com/harastaivan/gitmoji-linked-commits/commit/17bd80785ef0b7772b4170cd78f47fc162496726)]
+-   🔥 Remove images [[3377975](https://github.com/harastaivan/gitmoji-linked-commits/commit/33779752e268bdbae231bddac4ebb855ac5903d7)]
+-   🔥 Remove chinese description [[73bc251](https://github.com/harastaivan/gitmoji-linked-commits/commit/73bc251386a91338d64a963f548609b5f43bddd4)]
+
+### Miscellaneous
+
+-   📝 Update README [[8ff0c45](https://github.com/harastaivan/gitmoji-linked-commits/commit/8ff0c45cafc3ffaa054af915eb0f610a6d4dc688)]
 
 ## v1.1.2 (2022-03-07)
 
