@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import { GitExtension, Repository } from './api/git';
-import { ADDITIONAL_EMOJIS, ONLY_USE_ADDITIONAL_EMOJIS, OUTPUT_TYPE, SHOW_EMOJI_CODE } from './config';
-import Gitmoji from './gitmoji/gitmoji';
+import { OUTPUT_TYPE, SHOW_EMOJI_CODE } from './config';
+import { emojis } from './gitmoji';
 
 export function activate(context: vscode.ExtensionContext) {
     let disposable = vscode.commands.registerCommand('extension.Gitmoji', (uri?) => {
@@ -11,14 +11,6 @@ export function activate(context: vscode.ExtensionContext) {
         if (!git) {
             vscode.window.showErrorMessage('Unable to load Git Extension');
             return;
-        }
-
-        let emojis = [];
-
-        if (ONLY_USE_ADDITIONAL_EMOJIS === true) {
-            emojis = [...ADDITIONAL_EMOJIS];
-        } else {
-            emojis = [...Gitmoji, ...ADDITIONAL_EMOJIS];
         }
 
         const items = emojis.map((emojiObj) => {

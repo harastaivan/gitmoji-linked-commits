@@ -1,10 +1,11 @@
 // https://github.com/carloscuesta/gitmoji/commits/master/src/data/gitmojis.json
-interface Emoji {
-    readonly emoji: any;
-    readonly code: any;
-    readonly description: any;
+export interface Emoji {
+    readonly emoji: string;
+    readonly code: string;
+    readonly description: string;
 }
-let Gitmoji: Array<Emoji> = [
+
+export const GITMOJI: Array<Emoji> = [
     {
         emoji: '🎨',
         code: ':art:',
@@ -356,4 +357,3 @@ let Gitmoji: Array<Emoji> = [
         description: 'Improve developer experience',
     },
 ];
-export default Gitmoji;
