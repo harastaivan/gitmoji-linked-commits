@@ -32,30 +32,21 @@
     ],
     "icon": "images/icon.png",
     "activationEvents": [
-        "onCommand:extension.Gitmoji"
+        "onCommand:extension.gitmoji-linked-commit"
     ],
     "main": "./out/extension.js",
     "contributes": {
         "commands": [
             {
-                "command": "extension.Gitmoji",
-                "title": "Gitmoji: Gitmoji tool for git commit messages in VS Code",
+                "command": "extension.gitmoji-linked-commit",
+                "title": "Commit changes with Gitmoji",
                 "icon": "$(smiley)"
             }
         ],
-        "menus": {
-            "scm/title": [
-                {
-                    "when": "scmProvider == git",
-                    "command": "extension.Gitmoji",
-                    "group": "navigation"
-                }
-            ]
-        },
         "configuration": {
             "title": "Gitmoji",
             "properties": {
-                "gitmoji.outputType": {
+                "gitmoji-linked-commits.outputType": {
                     "type": "string",
                     "default": "emoji",
                     "enum": [
@@ -68,7 +59,7 @@
                     ],
                     "description": "Configure the type of Gitmoji output"
                 },
-                "gitmoji.additionalEmojis": {
+                "gitmoji-linked-commits.additionalEmojis": {
                     "type": "array",
                     "default": [],
                     "items": {
@@ -91,12 +82,12 @@
                     },
                     "description": "Additional emojis shown in the picker"
                 },
-                "gitmoji.onlyUseAdditionalEmojis": {
+                "gitmoji-linked-commits.onlyUseAdditionalEmojis": {
                     "type": "boolean",
                     "default": false,
                     "description": "Use your additional emojis instead the ones from the extension"
                 },
-                "gitmoji.showEmojiCode": {
+                "gitmoji-linked-commits.showEmojiCode": {
                     "type": "boolean",
                     "default": false,
                     "description": "Enable searching gitmojis by emoji code (example: ambulance will return hotfix)"
@@ -108,6 +99,7 @@
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile",
         "prettier": "prettier --ignore-path .gitignore \"**/*.+(ts|js|json|md)\"",
         "prettier:write": "npm run prettier -- --write",
         "prettier:check": "npm run prettier -- --list-different",

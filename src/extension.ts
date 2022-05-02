@@ -12,14 +12,17 @@ export function activate(context: vscode.ExtensionContext) {
             return;
         }
 
-        let additionalEmojis: Array<any> = vscode.workspace.getConfiguration().get('gitmoji.additionalEmojis') || [];
+        let additionalEmojis: Array<any> =
+            vscode.workspace.getConfiguration().get('gitmoji-linked-commit.additionalEmojis') || [];
 
-        const showEmojiCode: boolean | undefined = vscode.workspace.getConfiguration().get('gitmoji.showEmojiCode');
+        const showEmojiCode: boolean | undefined = vscode.workspace
+            .getConfiguration()
+            .get('gitmoji-linked-commit.showEmojiCode');
 
         let emojis = [];
         let onlyUseAdditionalEmojis: boolean | undefined = vscode.workspace
             .getConfiguration()
-            .get('gitmoji.onlyUseAdditionalEmojis');
+            .get('gitmoji-linked-commit.onlyUseAdditionalEmojis');
 
         if (onlyUseAdditionalEmojis === true) {
             emojis = [...additionalEmojis];
@@ -41,7 +44,7 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.window.showQuickPick(items).then(function (selected) {
             if (selected) {
                 vscode.commands.executeCommand('workbench.view.scm');
-                let outputType = vscode.workspace.getConfiguration().get('gitmoji.outputType');
+                let outputType = vscode.workspace.getConfiguration().get('gitmoji-linked-commit.outputType');
 
                 if (uri) {
                     let selectedRepository = git.repositories.find((repository) => {

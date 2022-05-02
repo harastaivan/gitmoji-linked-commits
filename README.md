@@ -25,7 +25,7 @@ Sample configuration:
 
 ```json
 {
-    "gitmoji.outputType": "emoji"
+    "gitmoji-linked-commits.outputType": "emoji"
 }
 ```
 
@@ -39,7 +39,7 @@ Sample configuration:
 
 ```json
 {
-    "gitmoji.additionalEmojis": [
+    "gitmoji-linked-commits.additionalEmojis": [
         {
             "emoji": "🐛",
             "code": ":bug:",
@@ -62,7 +62,7 @@ Sample configuration:
 
 ```json
 {
-    "gitmoji.onlyUseAdditionalEmojis": true
+    "gitmoji-linked-commits.onlyUseAdditionalEmojis": true
 }
 ```
 
@@ -74,7 +74,7 @@ Sample configuration:
 
 ```json
 {
-    "gitmoji.showEmojiCode": true
+    "gitmoji-linked-commits.showEmojiCode": true
 }
 ```
 
