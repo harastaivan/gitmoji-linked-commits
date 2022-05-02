@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import { GitExtension, Repository } from './api/git';
+import { ADDITIONAL_EMOJIS, ONLY_USE_ADDITIONAL_EMOJIS, OUTPUT_TYPE, SHOW_EMOJI_CODE } from './config';
 import Gitmoji from './gitmoji/gitmoji';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -12,27 +13,17 @@ export function activate(context: vscode.ExtensionContext) {
             return;
         }
 
-        let additionalEmojis: Array<any> =
-            vscode.workspace.getConfiguration().get('gitmoji-linked-commit.additionalEmojis') || [];
-
-        const showEmojiCode: boolean | undefined = vscode.workspace
-            .getConfiguration()
-            .get('gitmoji-linked-commit.showEmojiCode');
-
         let emojis = [];
-        let onlyUseAdditionalEmojis: boolean | undefined = vscode.workspace
-            .getConfiguration()
-            .get('gitmoji-linked-commit.onlyUseAdditionalEmojis');
 
-        if (onlyUseAdditionalEmojis === true) {
-            emojis = [...additionalEmojis];
+        if (ONLY_USE_ADDITIONAL_EMOJIS === true) {
+            emojis = [...ADDITIONAL_EMOJIS];
         } else {
-            emojis = [...Gitmoji, ...additionalEmojis];
+            emojis = [...Gitmoji, ...ADDITIONAL_EMOJIS];
         }
 
         const items = emojis.map((emojiObj) => {
             const { description, code, emoji } = emojiObj;
-            const displayCode = showEmojiCode ? code : '';
+            const displayCode = SHOW_EMOJI_CODE ? code : '';
             const label = `${emoji} ${description} ${displayCode}`;
             return {
                 label,
@@ -44,14 +35,13 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.window.showQuickPick(items).then(function (selected) {
             if (selected) {
                 vscode.commands.executeCommand('workbench.view.scm');
-                let outputType = vscode.workspace.getConfiguration().get('gitmoji-linked-commit.outputType');
 
                 if (uri) {
                     let selectedRepository = git.repositories.find((repository) => {
                         return repository.rootUri.path === uri._rootUri.path;
                     });
                     if (selectedRepository) {
-                        if (outputType === 'emoji') {
+                        if (OUTPUT_TYPE === 'emoji') {
                             prefixCommit(selectedRepository, selected.emoji);
                         } else {
                             prefixCommit(selectedRepository, selected.code);
@@ -59,7 +49,7 @@ export function activate(context: vscode.ExtensionContext) {
                     }
                 } else {
                     for (let repo of git.repositories) {
-                        if (outputType === 'emoji') {
+                        if (OUTPUT_TYPE === 'emoji') {
                             prefixCommit(repo, selected.emoji);
                         } else {
                             prefixCommit(repo, selected.code);
