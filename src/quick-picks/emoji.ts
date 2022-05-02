@@ -4,7 +4,7 @@ import { SHOW_EMOJI_CODE } from '../config';
 import { emojis } from '../gitmoji';
 import type { Emoji } from '../gitmoji/data';
 
-export interface EmojiWithLabel extends Emoji {
+export interface EmojiWithLabel extends Omit<Emoji, 'description'> {
     label: string;
 }
 
@@ -14,7 +14,6 @@ export const pickEmoji = async (): Promise<EmojiWithLabel | undefined> => {
         const label = `${emoji} ${description} ${displayCode}`;
         return {
             label,
-            description,
             code,
             emoji,
         };
