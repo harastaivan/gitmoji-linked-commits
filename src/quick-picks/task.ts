@@ -34,7 +34,7 @@ export const pickTask = async (): Promise<Task | undefined> => {
             if (!match || match.length === 0) return null;
 
             return {
-                value: match[1],
+                value: `#${match[1]}`,
                 label: match[1],
                 description: `Pick from ${branch.name}`,
                 alwaysShow: branch.isCurrent,
