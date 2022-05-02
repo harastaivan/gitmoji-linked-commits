@@ -1,5 +1,14 @@
 # Changelog
 
+<a name="2.0.1"></a>
+
+## 2.0.1 (2022-05-02)
+
+### Fixed
+
+-   🐛 Show task picker based on description logic [[60d4989](https://github.com/harastaivan/gitmoji-linked-commits/commit/60d4989195da571dd942576dab9e12ddb89d553a)]
+-   🐛 Fix task value [[faa87d7](https://github.com/harastaivan/gitmoji-linked-commits/commit/faa87d73505bc45496092371d760ce013476fa86)]
+
 <a name="2.0.0"></a>
 
 ## 2.0.0 (2022-05-02)
