@@ -1,5 +1,3 @@
-
-
 <p align="center">
     <a href="https://github.com/harastaivan/gitmoji-linked-commits/issues">Report Bug</a>
     ·
@@ -21,13 +19,13 @@
 
 ### Select output type
 
-- `outputType` - Configure the type of emoji output as needed. Default is `emoji`
+-   `outputType` - Configure the type of emoji output as needed. Default is `emoji`
 
 Sample configuration:
 
 ```json
 {
-  "gitmoji.outputType": "emoji"
+    "gitmoji.outputType": "emoji"
 }
 ```
 
@@ -35,48 +33,48 @@ Sample configuration:
 
 ### Add configurable additionnal emojis
 
-- `additionalEmojis` - Add configurable additionnal emojis.
+-   `additionalEmojis` - Add configurable additionnal emojis.
 
 Sample configuration:
 
 ```json
 {
-  "gitmoji.additionalEmojis": [
-    {
-      "emoji": "🐛",
-      "code": ":bug:",
-      "description": "Fix a bug.",
-    },
-    {
-      "emoji": "🚑",
-      "code": ":ambulance:",
-      "description": "Critical hotfix.",
-    }
-  ]
+    "gitmoji.additionalEmojis": [
+        {
+            "emoji": "🐛",
+            "code": ":bug:",
+            "description": "Fix a bug."
+        },
+        {
+            "emoji": "🚑",
+            "code": ":ambulance:",
+            "description": "Critical hotfix."
+        }
+    ]
 }
 ```
 
 ### Only use your additionnal emojis
 
-- `onlyUseAdditionalEmojis` - Use your additional emojis instead the ones from the extension.
+-   `onlyUseAdditionalEmojis` - Use your additional emojis instead the ones from the extension.
 
 Sample configuration:
 
 ```json
 {
-  "gitmoji.onlyUseAdditionalEmojis": true
+    "gitmoji.onlyUseAdditionalEmojis": true
 }
 ```
 
 ### Search gitmoji by emoji code
 
-- `showEmojiCode` - Enable searching gitmojis by emoji code (example: ambulance will return hotfix).
+-   `showEmojiCode` - Enable searching gitmojis by emoji code (example: ambulance will return hotfix).
 
 Sample configuration:
 
 ```json
 {
-  "gitmoji.showEmojiCode": true
+    "gitmoji.showEmojiCode": true
 }
 ```
 

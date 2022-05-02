@@ -1,113 +1,113 @@
 {
-  "name": "gitmoji-linked-commits",
-  "displayName": "Gitmoji linked commits",
-  "description": "Gitmoji tool for git commit messages in VS Code",
-  "version": "1.1.2",
-  "author": {
-    "name": "Ivan Harasta",
-    "email": "ivan@harasta.dev"
-  },
-  "publisher": "harastaivan",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/harastaivan/gitmoji-linked-commits/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/harastaivan/gitmoji-linked-commits.git"
-  },
-  "homepage": "https://github.com/harastaivan/gitmoji-linked-commits/blob/main/README.md",
-  "engines": {
-    "vscode": "^1.40.0"
-  },
-  "keywords": [
-    "git",
-    "emoji",
-    "gitmoji",
-    "commit",
-    "messages"
-  ],
-  "categories": [
-    "Other"
-  ],
-  "icon": "images/icon.png",
-  "activationEvents": [
-    "onCommand:extension.Gitmoji"
-  ],
-  "main": "./out/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "extension.Gitmoji",
-        "title": "Gitmoji: Gitmoji tool for git commit messages in VS Code",
-        "icon": "$(smiley)"
-      }
-    ],
-    "menus": {
-      "scm/title": [
-        {
-          "when": "scmProvider == git",
-          "command": "extension.Gitmoji",
-          "group": "navigation"
-        }
-      ]
+    "name": "gitmoji-linked-commits",
+    "displayName": "Gitmoji linked commits",
+    "description": "Gitmoji tool for git commit messages in VS Code",
+    "version": "1.1.2",
+    "author": {
+        "name": "Ivan Harasta",
+        "email": "ivan@harasta.dev"
     },
-    "configuration": {
-      "title": "Gitmoji",
-      "properties": {
-        "gitmoji.outputType": {
-          "type": "string",
-          "default": "emoji",
-          "enum": [
-            "code",
-            "emoji"
-          ],
-          "enumDescriptions": [
-            "Suitable for Github, etc.",
-            "Suitable for Github, Gitlab, Coding, etc."
-          ],
-          "description": "Configure the type of Gitmoji output"
-        },
-        "gitmoji.additionalEmojis": {
-          "type": "array",
-          "default": [],
-          "items": {
-            "type": "object",
-            "title": "A gitmoji entry",
-            "properties": {
-              "emoji": {
-                "type": "string",
-                "description": "The emoji character"
-              },
-              "code": {
-                "type": "string",
-                "description": "The emoji's :code: (including both colons)"
-              },
-              "description": {
-                "type": "string",
-                "description": "The commit type described by this emoji"
-              }
+    "publisher": "harastaivan",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/harastaivan/gitmoji-linked-commits/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/harastaivan/gitmoji-linked-commits.git"
+    },
+    "homepage": "https://github.com/harastaivan/gitmoji-linked-commits/blob/main/README.md",
+    "engines": {
+        "vscode": "^1.40.0"
+    },
+    "keywords": [
+        "git",
+        "emoji",
+        "gitmoji",
+        "commit",
+        "messages"
+    ],
+    "categories": [
+        "Other"
+    ],
+    "icon": "images/icon.png",
+    "activationEvents": [
+        "onCommand:extension.Gitmoji"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.Gitmoji",
+                "title": "Gitmoji: Gitmoji tool for git commit messages in VS Code",
+                "icon": "$(smiley)"
             }
-          },
-          "description": "Additional emojis shown in the picker"
+        ],
+        "menus": {
+            "scm/title": [
+                {
+                    "when": "scmProvider == git",
+                    "command": "extension.Gitmoji",
+                    "group": "navigation"
+                }
+            ]
         },
-        "gitmoji.onlyUseAdditionalEmojis": {
-          "type": "boolean",
-          "default": false,
-          "description": "Use your additional emojis instead the ones from the extension"
-        },
-        "gitmoji.showEmojiCode": {
-          "type": "boolean",
-          "default": false,
-          "description": "Enable searching gitmojis by emoji code (example: ambulance will return hotfix)"
+        "configuration": {
+            "title": "Gitmoji",
+            "properties": {
+                "gitmoji.outputType": {
+                    "type": "string",
+                    "default": "emoji",
+                    "enum": [
+                        "code",
+                        "emoji"
+                    ],
+                    "enumDescriptions": [
+                        "Suitable for Github, etc.",
+                        "Suitable for Github, Gitlab, Coding, etc."
+                    ],
+                    "description": "Configure the type of Gitmoji output"
+                },
+                "gitmoji.additionalEmojis": {
+                    "type": "array",
+                    "default": [],
+                    "items": {
+                        "type": "object",
+                        "title": "A gitmoji entry",
+                        "properties": {
+                            "emoji": {
+                                "type": "string",
+                                "description": "The emoji character"
+                            },
+                            "code": {
+                                "type": "string",
+                                "description": "The emoji's :code: (including both colons)"
+                            },
+                            "description": {
+                                "type": "string",
+                                "description": "The commit type described by this emoji"
+                            }
+                        }
+                    },
+                    "description": "Additional emojis shown in the picker"
+                },
+                "gitmoji.onlyUseAdditionalEmojis": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Use your additional emojis instead the ones from the extension"
+                },
+                "gitmoji.showEmojiCode": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Enable searching gitmojis by emoji code (example: ambulance will return hotfix)"
+                }
+            }
         }
-      }
-    }
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
         "prettier": "prettier --ignore-path .gitignore \"**/*.+(ts|js|json|md)\"",
         "prettier:write": "npm run prettier -- --write",
         "prettier:check": "npm run prettier -- --list-different"
