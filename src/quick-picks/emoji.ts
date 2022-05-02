@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 
 import { SHOW_EMOJI_CODE } from '../config';
 import { emojis } from '../gitmoji';
-import { Emoji } from '../gitmoji/data';
+import type { Emoji } from '../gitmoji/data';
 
 export interface EmojiWithLabel extends Emoji {
     label: string;

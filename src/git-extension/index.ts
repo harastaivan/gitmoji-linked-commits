@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
-import { GitExtension, Repository } from '../api/git';
+import type { GitExtension, Repository } from '../api/git';
 import { OUTPUT_TYPE } from '../config';
-import { EmojiWithLabel } from '../quick-picks';
+import type { EmojiWithLabel } from '../quick-picks';
 
 export const getGitExtension = () => {
     const vscodeGit = vscode.extensions.getExtension<GitExtension>('vscode.git');
