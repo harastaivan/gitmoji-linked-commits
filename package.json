@@ -2,7 +2,7 @@
     "name": "gitmoji-linked-commits",
     "displayName": "Gitmoji linked commits",
     "description": "Gitmoji tool for git commit messages in VS Code",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "author": {
         "name": "Ivan Harasta",
         "email": "ivan@harasta.dev"

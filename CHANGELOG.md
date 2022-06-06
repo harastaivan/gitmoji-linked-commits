@@ -1,5 +1,18 @@
 # Changelog
 
+<a name="2.0.2"></a>
+
+## 2.0.2 (2022-06-06)
+
+### Changed
+
+-   🍱 Add example gif [[a2d618d](https://github.com/harastaivan/gitmoji-linked-commits/commit/a2d618dabbc0347a562d9112149649b3ebe83023)]
+-   🍱 Update icon [[fe9488d](https://github.com/harastaivan/gitmoji-linked-commits/commit/fe9488dd286af6730468ce032c1087facc6e2ab4)]
+
+### Miscellaneous
+
+-   📝 Update README [[93948d5](https://github.com/harastaivan/gitmoji-linked-commits/commit/93948d5a9fcbe4c1f915e7c284e0dd91b2acd50d)]
+
 <a name="2.0.1"></a>
 
 ## 2.0.1 (2022-05-02)
