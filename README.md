@@ -8,11 +8,17 @@
 
 <p align="center" style="font-weight: 700; font-size: 1.5rem">This is a fork 🍴 of <a href="https://github.com/seatonjiang">seatonjiang</a>'s <a href="https://github.com/seatonjiang/gitmoji-vscode">gitmoji-vscode</a></p>
 
+## 💻 Screenshot
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/harastaivan/gitmoji-linked-commits/main/images/example.gif">
+</p>
+
 ## 📦 Install
 
 1. Open [Visual Studio Code](https://code.visualstudio.com/).
 2. Press `Ctrl+Shift+X` to open the Extensions tab.
-3. Type `Gitmoji` to find the extension.
+3. Type `gitmoji-linked-commits` to find the extension.
 4. Click the `Install` button, then the `Enable` button.
 
 ## 🔨 Configuration
