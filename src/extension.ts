@@ -37,6 +37,8 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.commands.executeCommand('workbench.view.scm');
 
         createCommitMessage({ emoji, message, description, task }, uri);
+
+        vscode.commands.executeCommand('workbench.scm.focus');
     });
 
     context.subscriptions.push(disposable);
