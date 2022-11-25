@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="2.1.0"></a>
+
+## 2.1.0 (2022-11-25)
+
+### Added
+
+-   ➕ Add vsce [[23246a4](https://github.com/harastaivan/gitmoji-linked-commits/commit/23246a48be8e6f5e1aa4935bc555d67714a1ce04)]
+-   ✨ Focus SCM input box when commit message created [[a06f1ef](https://github.com/harastaivan/gitmoji-linked-commits/commit/a06f1efa512a9715aa2f1b00efade78ac83a9e97)]
+
+### Miscellaneous
+
+-   👷 Setup deploy on release action [[23074a7](https://github.com/harastaivan/gitmoji-linked-commits/commit/23074a75f17c5e12edcc4caee73bf58ea26a96ed)]
+-   🔨 Add deploy script [[99ef538](https://github.com/harastaivan/gitmoji-linked-commits/commit/99ef5382f5b9b7aacef0e541774392eedd0cd92e)]
+
 <a name="2.0.2"></a>
 
 ## 2.0.2 (2022-06-06)
