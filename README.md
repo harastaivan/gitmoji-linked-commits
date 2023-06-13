@@ -23,6 +23,28 @@
 
 ## 🔨 Configuration
 
+### Configure branch task pattern
+
+-   `branchTaskPattern` - Configure regexp pattern to extract task id from branch name. Default is `"[a-zA-Z]+/(\\d+)-.*"`.
+
+Sample configuration:
+
+-   Redmine (extracts `12345` from branch in format `feat/12345-some-feature`)
+
+```json
+{
+    "gitmoji-linked-commits.branchTaskPattern": "[a-zA-Z]+/(\\d+)-.*"
+}
+```
+
+-   Clickup (extracts `CU-ASDASD` from branch in format `feat/CU-ASDASD-some-feature`)
+
+```json
+{
+    "gitmoji-linked-commits.branchTaskPattern": "[a-zA-Z]+/(CU-\\w+)-.*"
+}
+```
+
 ### Select output type
 
 -   `outputType` - Configure the type of emoji output as needed. Default is `emoji`

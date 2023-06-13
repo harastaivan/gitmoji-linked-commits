@@ -6,6 +6,9 @@ enum OutputType {
     CODE = 'code',
 }
 
+export const BRANCH_TASK_PATTERN: string =
+    workspace.getConfiguration().get('gitmoji-linked-commits.branchTaskPattern') || '[a-zA-Z]+/(\\d+)-.*';
+
 export const ADDITIONAL_EMOJIS: Array<Emoji> =
     workspace.getConfiguration().get('gitmoji-linked-commits.additionalEmojis') || [];
 

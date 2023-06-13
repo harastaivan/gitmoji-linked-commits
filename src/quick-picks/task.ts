@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import { getGitExtension } from '../git-extension';
 import { sortBranches, selectBranches } from '../git-extension/branches';
+import { BRANCH_TASK_PATTERN } from '../config';
 
 const FALLBACK: Task = {
     value: '',
@@ -25,11 +26,9 @@ export const pickTask = async (): Promise<Task | undefined> => {
     const branches = (await selectBranches()) || [];
     const orderedBranches = sortBranches(branches);
 
-    console.log({ orderedBranches });
-
     const items = orderedBranches
         ?.map((branch): Task | null => {
-            const match = branch.name?.match(/[a-zA-Z]+\/(\d+)-.*/);
+            const match = branch.name?.match(BRANCH_TASK_PATTERN);
 
             if (!match || match.length === 0) return null;
 
