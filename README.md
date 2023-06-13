@@ -45,6 +45,18 @@ Sample configuration:
 }
 ```
 
+### Configure task prefix
+
+-   `descriptionTaskPrefix` - Configure prefix of task id in commit description. Default is `"#"`.
+
+Sample configuration:
+
+```json
+{
+    "gitmoji-linked-commits.descriptionTaskPrefix": ""
+}
+```
+
 ### Select output type
 
 -   `outputType` - Configure the type of emoji output as needed. Default is `emoji`
