@@ -46,6 +46,11 @@
         "configuration": {
             "title": "Gitmoji",
             "properties": {
+                "gitmoji-linked-commits.branchTaskPattern": {
+                    "type": "string",
+                    "default": "[a-zA-Z]+/(\\d+)-.*",
+                    "description": "Configure regexp pattern to extract task id from branch name"
+                },
                 "gitmoji-linked-commits.outputType": {
                     "type": "string",
                     "default": "emoji",
