@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import { getGitExtension } from '../git-extension';
 import { sortBranches, selectBranches } from '../git-extension/branches';
-import { BRANCH_TASK_PATTERN } from '../config';
+import { BRANCH_TASK_PATTERN, DESCRIPTION_TASK_PREFIX } from '../config';
 
 const FALLBACK: Task = {
     value: '',
@@ -33,7 +33,7 @@ export const pickTask = async (): Promise<Task | undefined> => {
             if (!match || match.length === 0) return null;
 
             return {
-                value: `#${match[1]}`,
+                value: `${DESCRIPTION_TASK_PREFIX}${match[1]}`,
                 label: match[1],
                 description: `Pick from ${branch.name}`,
                 alwaysShow: branch.isCurrent,

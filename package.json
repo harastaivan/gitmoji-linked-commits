@@ -51,6 +51,11 @@
                     "default": "[a-zA-Z]+/(\\d+)-.*",
                     "description": "Configure regexp pattern to extract task id from branch name"
                 },
+                "gitmoji-linked-commits.descriptionTaskPrefix": {
+                    "type": "string",
+                    "default": "#",
+                    "description": "Configure prefix of task id in commit description"
+                },
                 "gitmoji-linked-commits.outputType": {
                     "type": "string",
                     "default": "emoji",
