@@ -25,7 +25,7 @@
 
 ### Configure branch task pattern
 
--   `branchTaskPattern` - Configure regexp pattern to extract task id from branch name. Default is `"[a-zA-Z]+/(\\d+)-.*"`.
+-   `branchTaskPattern` - Configure regexp pattern to extract task id from branch name. Default is `[a-zA-Z]+/(\d+)-.*` in UI and `"[a-zA-Z]+/(\\d+)-.*"` in JSON.
 
 Sample configuration:
 
@@ -44,6 +44,8 @@ Sample configuration:
     "gitmoji-linked-commits.branchTaskPattern": "[a-zA-Z]+/(CU-\\w+)-.*"
 }
 ```
+
+> ❕ When you're setting branch task pattern in settings UI, instead of setting it directly in JSON, you don't need to escape back slash char with `\` and `[a-zA-Z]+/(CU-\w+)-.*` is perfectly valid pattern then.
 
 ### Configure task prefix
 
