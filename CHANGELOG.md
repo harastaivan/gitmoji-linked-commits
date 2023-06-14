@@ -1,5 +1,14 @@
 # Changelog
 
+<a name="2.2.0"></a>
+
+## 2.2.0 (2023-06-14)
+
+### Added
+
+-   ✨ Add configurable description task prefix [[c285686](https://github.com/harastaivan/gitmoji-linked-commits/commit/c285686060b31e8fd93aa85cf82b11f840bc6115)]
+-   ✨ Add configurable branch name task pattern [[8c77468](https://github.com/harastaivan/gitmoji-linked-commits/commit/8c774683e8c7ba29e011e5b9d166e05d3ec36ab8)]
+
 <a name="2.1.0"></a>
 
 ## 2.1.0 (2022-11-25)
